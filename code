@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+class base{
+public:
+    virtual void print(){//function overriding
+        cout<<"Print function of base class"<<endl;
+    }
+    void print(int n){ //function overloading
+        cout<<"Printing "<<n<<" from base class"<<endl;
+    }
+};
+class derived:public base{
+public:
+    void print(){
+        cout<<"Print function of derived class"<<endl;
+    }
+};
+int main() {
+    base obj1;
+    obj1.print();
+    obj1.print(3);
+    derived obj2;
+    obj2.print();
+    return 0;
+}
